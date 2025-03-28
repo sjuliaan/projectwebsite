@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #564148;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+a {
+    color: #564148;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #564148;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content Container */
+.content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #564148;
+}
+
+/* Dream Places Grid - replacing the container */
+.dream-places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+/* Place Card Styling */
+.place-card {
+    width: 300px;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+
+/* Shape Wrapper */
+.shape-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.shape-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.place-card:hover .shape-wrapper {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.place-card:hover .shape-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Shape Variations */
+.shape-circle {
+    border-radius: 50%;
+}
+
+.shape-hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.shape-diamond {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.shape-triangle {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.shape-pentagon {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.shape-star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Place Info */
+.place-info {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.place-info h3 {
+    margin-top: 0;
+    color: #564148;
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.place-info p {
+    margin-bottom: 0;
+    text-align: center;
+    color: #666;
+}
+
+/* Go-to-Top Button */
+.go-top-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.go-top {
+    background-color: #564148;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.go-top:hover {
+    background-color: #3a2d32;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #564148;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: white;
+    font-weight: 400;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dream-places-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .shape-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .place-card {
+        width: 250px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dream-places-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .shape-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .place-card {
+        width: 200px;
+    }
+    
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+}

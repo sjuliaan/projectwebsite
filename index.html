@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Seth Julian B. Cammayo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+        /* Navigation Bar */
+        nav {
+            background-color: #564148;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Container */
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .welcome-content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .video-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            height: 376px;
+            background-color: #ddd;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #564148;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .highlight {
+            background-color: #e9c7c2;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .welcome-content {
+                padding: 1rem;
+                order: 1;
+            }
+            
+            .video-container {
+                width: 100%;
+                margin-bottom: 2rem;
+                order: 2;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-link"  style="text-decoration: underline;">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="biography.html" class="nav-link">
+            <i class="fas fa-user"></i> Biography
+        </a>
+        <a href="skills.html" class="nav-link">
+            <i class="fas fa-tools"></i> Skills
+        </a>
+        <a href="resume.html" class="nav-link">
+            <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <a href="gallerydump.html" class="nav-link">
+            <i class="fas fa-images"></i> Gallery Dump
+        </a>
+        <a href="mybeat.html" class="nav-link">
+            <i class="fas fa-music"></i> My Beat
+        </a>
+        <a href="tvshows.html" class="nav-link">
+            <i class="fas fa-tv"></i> TV Shows
+        </a>
+        <a href="mymovies.html" class="nav-link">
+            <i class="fas fa-film"></i> Movies
+        </a>
+        <a href="dreamplace.html" class="nav-link">
+            <i class="fas fa-map-pin"></i> Dream Places
+        </a>
+        <a href="bucketlist.html" class="nav-link">
+            <i class="fas fa-trophy"></i> Bucket List
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="hero">
+        <div class="welcome-content">
+            <h1>Welcome to My Personal Space</h1>
+            <p>Hello there! I'm <span class="highlight">Seth Julian B. Cammayo</span>, and this is my digital portfolio where I share my passions, skills, and experiences.</p>
+            <p>Here you'll find everything from my professional background to my personal interests - my favorite music, movies, travel dreams, and more. Each section represents a different facet of who I am and what I love.</p>
+            <p>Feel free to explore using the navigation above, and don't hesitate to reach out if you'd like to connect!</p>
+        </div>
+        
+        <div class="video-container">
+            <video controls autoplay>
+                <source src="welcome-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* Bucket List styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('assets/dreamplace/bucketlist-pattern.png');
+    background-attachment: fixed;
+    background-size: 200px;
+    background-blend-mode: overlay;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #564148;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #564148;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+    
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Content */
+.content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.page-title h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #564148;
+    display: inline-block;
+    padding: 0 2rem 1rem;
+    border-bottom: 3px solid #564148;
+}
+
+/* Bucket List Intro */
+.bucketlist-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+/* Bucket List Container */
+.bucketlist-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+/* Bucket List Section */
+.bucketlist-section {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.bucketlist-section h2 {
+    color: #564148;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.bucketlist-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #564148;
+}
+
+.bucketlist-section h2 i {
+    margin-right: 15px;
+}
+
+/* Bucket List Items */
+.bucketlist-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bucketlist-items li {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #d1b3c4;
+}
+
+.bucketlist-items li:hover {
+    background-color: #f5f0f2;
+    border-left-color: #564148;
+}
+
+.bucketlist-items.achieved li {
+    border-left-color: #6b9080;
+}
+
+.bucketlist-items.achieved li:hover {
+    border-left-color: #3a5a40;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #564148;
+}
+
+.item-description {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Go-to-Top Button */
+.go-top-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.go-top {
+    background-color: #564148;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.go-top:hover {
+    background-color: #3a2d32;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .bucketlist-section {
+        padding: 1.5rem;
+    }
+    
+    .bucketlist-items li {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title h1 {
+        font-size: 2rem;
+        padding: 0 1rem 0.5rem;
+    }
+    
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+    
+    .item-title {
+        font-size: 1.1rem;
+    }
+}
